@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="EnterPoint.cpp" />
+    <ClCompile Include="WindowsWnd.cpp">
+      <Filter>Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="SubWindWindows.cpp">
+      <Filter>Windows</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DEFINES.h" />
+    <ClInclude Include="WindowsWnd.h">
+      <Filter>Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="IWindow.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="ISubWindow.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="SubWindWindows.h">
+      <Filter>Windows</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Windows">
+      <UniqueIdentifier>{849ceee5-17c9-41eb-a702-83744788a2a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interface">
+      <UniqueIdentifier>{6834b0b5-2d2b-4a31-9a7d-b73a4b0e0cf8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
