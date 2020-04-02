@@ -2,8 +2,6 @@
 
 #ifdef ATWin
 
-#include <Windows.h>
-
 bool SubWindWindows::CreateWnd()
 {
 	return false;

@@ -5,24 +5,32 @@
 
 #include <Windows.h>
 #include "IWindow.h"
-#include "ISubWindow.h"
 #include "SubWindWindows.h"
+#include "ISubWindow.h"
+#include <map>
 
 class WindowsWnd : public IWindow
 {
 private:
-	WNDCLASSEX s_WndClassEx;
-	HWND handle;
+	WNDCLASSEX _wnd;
+	HWND _handle;
+	MSG msg{ 0 };
+
+	std::map<HWND, SubWindWindows*> _subWindow;
 	
 public:
 
-	WindowsWnd(const char* title, int width, int height) :IWindow(title, width, height) {};
+	WindowsWnd(const wchar_t* title, int width, int height) :IWindow(title, width, height) {};
 	~WindowsWnd() {};
 
 	virtual bool CreateWnd();
-	virtual bool Run();
-	virtual bool Update();
+	virtual bool LogicUpdate();
+	virtual bool Redraw();
+	virtual bool ShowWnd();
+	virtual bool HideWnd();
 	virtual bool CreateSubWindow(ISubWindow* subWindow, const char* title, int width, int height);
+
+	static LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 
 };
 

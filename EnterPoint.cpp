@@ -7,9 +7,14 @@
 
 
 int main() {
-
 #ifdef ATWin
-	IWindow* window = new WindowsWnd("main window", 800, 600);
+	IWindow* window = new WindowsWnd(L"main window", 800, 600);
 #endif
+    window->CreateWnd();
+    window->ShowWnd();
+    while (true)
+        window->LogicUpdate();
+
+    
 
 }
