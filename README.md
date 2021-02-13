@@ -1,2 +1,1 @@
-# ATWL
-Anthill Window Library
+# Learn winapi window CPP
